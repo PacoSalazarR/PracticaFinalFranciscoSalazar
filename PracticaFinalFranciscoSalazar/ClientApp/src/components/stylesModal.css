@@ -1,0 +1,8 @@
+﻿.modal-footer {
+    display: flex;
+    justify-content: space-between;
+}
+
+.modal-footer .btn {
+    width: 45%; 
+}

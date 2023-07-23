@@ -1,5 +1,6 @@
 ﻿import { useEffect, useState } from "react"
 import { Modal, ModalHeader, ModalBody, Form, FormGroup, Label, Input, ModalFooter, Button } from "reactstrap"
+import "./stylesModal.css"
 
 const modeloTarea = {
     id: 0,
@@ -13,7 +14,6 @@ const ModalTarea = ({ mostrarModal, setMostrarModal, guardarTarea, editar, setEd
     const [tarea, setTarea] = useState(modeloTarea);
 
     const actualizaDato = (e) => {
-        console.log(e.target.name + " : " + e.target.value)
         setTarea(
             {
                 ...tarea,
@@ -72,6 +72,7 @@ const ModalTarea = ({ mostrarModal, setMostrarModal, guardarTarea, editar, setEd
                     </FormGroup>
                     <FormGroup>
                         <Label>Completado</Label>
+                        <br></br>
                         <Input
                             type="checkbox"
                             name="completado"
@@ -81,7 +82,7 @@ const ModalTarea = ({ mostrarModal, setMostrarModal, guardarTarea, editar, setEd
                     </FormGroup>
                 </Form>
             </ModalBody>
-            <ModalFooter>
+            <ModalFooter className="modal-footer">
                 <Button color="primary" size="sm" onClick={enviarDatos}>Guardar</Button>
                 <Button color="danger" size="sm" onClick={cerrarModal}>Cerrar</Button>
             </ModalFooter>

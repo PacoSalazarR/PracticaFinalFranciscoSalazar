@@ -1,0 +1,41 @@
+﻿.custom-table {
+    width: 100%;
+    background-color: #f9f9f9;
+}
+
+.custom-table th {
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.custom-table thead {
+    color: #fff;
+    background-image: linear-gradient(to right, #007bff, #28a745);
+}
+
+.custom-table td {
+    vertical-align: middle;
+}
+
+.custom-table tbody tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+.btn-editar {
+    background-color: #28a745;
+    border: none;
+    margin-right: 5px;
+}
+
+.btn-editar:hover {
+    background-color: #218838;
+}
+
+.btn-eliminar {
+    background-color: #dc3545;
+    border: none;
+}
+
+.btn-eliminar:hover {
+    background-color: #c82333;
+}

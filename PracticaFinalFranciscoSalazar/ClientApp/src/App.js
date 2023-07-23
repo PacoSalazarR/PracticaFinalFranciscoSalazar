@@ -80,17 +80,23 @@ const App = () => {
     }
 
     return (
-        <Container>
-            <Row className="mt-5">
-                <Col sm="12">
+        <Container className="my-5">
+            <Row>
+                <Col md="8" className="mx-auto">
                     <Card>
-                        <CardHeader>
-                            <h5>Tareas</h5>
+                        <CardHeader className="d-flex align-items-center justify-content-center card-header">
+                            <h5 className="m-0">Tareas</h5>
                         </CardHeader>
                         <CardBody>
-                            <Button size="sm" color="success" onClick={() => setMostrarModal(!mostrarModal)}>Nuevo Tarea</Button>
-                            <hr></hr>
-                            <TablaTareas data={tareas}
+                            <div className="d-flex justify-content-between align-items-center mb-3">
+                                <h6 className="m-0">Lista de Tareas</h6>
+                                <Button size="sm" color="success" onClick={() => setMostrarModal(!mostrarModal)}>
+                                    Nueva Tarea
+                                </Button>
+                            </div>
+                            <hr />
+                            <TablaTareas
+                                data={tareas}
                                 setEditar={setEditar}
                                 mostrarModal={mostrarModal}
                                 setMostrarModal={setMostrarModal}
